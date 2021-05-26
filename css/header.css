@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+.head-container{
+    width : 100%;
+    height : 100px;
+    display: flex;
+    background: transparent;
+}
+.head-container >div
+{
+    display: flex;
+    align-items: center;
+}
+.left > div {
+    padding-left: 30px;
+}
+.logo
+{
+    font-size: 60px;
+    color: white;
+}
+.app-name
+{
+    font-size: 30px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    
+}
+@media screen  and (max-height : 600px) {
+    .head-container{
+        background-color: #4481eb; ;
+    }
+    .head-container{
+        height: 70px;
+    }
+    .app-name{
+        font-size: 25px;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .left > div {
+        padding-left: 20px;
+    }
+}
+@media screen  and (max-width : 880px)
+{
+    .head-container{
+        background-color: #4481eb; ;
+    }
+    .head-container{
+        height: 70px;
+    }
+    .app-name{
+        font-size: 25px;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .left > div {
+        padding-left: 20px;
+    }
+}

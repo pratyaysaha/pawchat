@@ -1,0 +1,130 @@
+html,body{
+    width:100%;
+    height: 100%;
+    margin: 0px;
+}
+.coloring
+{
+    width: 50%;
+    height : calc(100% - 50px);
+    position : absolute;
+    background-color: #4481eb;
+    z-index: -2;
+    border-bottom-right-radius: 90%;
+}
+.content-container
+{
+    width : 100%;
+    height: calc(100% - 150px);
+    display: flex;
+    align-items: center;
+}
+.content-left,.content-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.img-wrapper
+{
+    height: 60%;
+}
+.login-img
+{
+    width : 70%;
+    height: 70%;
+}
+.content-left
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-right
+{
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper
+{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-field
+{
+    width: fit-content;
+    border: 1px solid #444;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 47px;
+    width: 300px;
+}
+.input-field>i{
+    color: #444;
+    font-size: 20px;
+}
+.input
+{
+    width: 250px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-right: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+.input.password{
+    width: 230px;
+}
+.password-show:hover{
+    cursor: pointer;
+}
+.button-container
+{
+    position: relative;
+    top:20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    user-select: none;
+}
+.button
+{
+    background-color: #4481eb;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 47px;
+    color: white;
+}
+.button:hover
+{
+    cursor: pointer;
+    background-color: #184594;
+}
+.loading
+{
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    font-size: 30px;
+    display: none;
+}
+.error-message{
+    color:red;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+.account-create
+{
+    position:relative;
+    top:30px;
+    font-family: 'Nunito', sans-serif;
+}
+.label:hover
+{
+    color: #184594;
+    cursor: pointer;
+}

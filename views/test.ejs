@@ -1,0 +1,43 @@
+<h1>This is a test page for /test</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js" integrity="sha512-vUJTqeDCu0MKkOhuI83/MEX5HSNPW+Lw46BA775bAWIp1Zwgz3qggia/t2EnSGB9GoS2Ln6npDmbJTdNhHy1Yw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div class="bg" 
+style="background-image: url('https://chatapp-my.s3.us-east-2.amazonaws.com/acbb4615-546e-4904-9235-520af040f7e4.PNG'); 
+width: 50px; height: 50px; border-radius: 50%;
+background-size: 100% 100%; background-repeat: no-repeat; background-position: center;"></div>
+<input type="file"  accept="image/*" onchange="imagepreview(event)">
+<img class="img-pre" width="300px" height="300px"/>
+<div class="img-process" style="width: 400px; height: 400px; display: none;"></div>
+<button onclick="getimg()">Get me</button>
+<img class='img-final'/>
+<script>
+    var el=document.querySelector('.img-process')
+    var vanilla = new Croppie(el, {
+        viewport: { width: 100, height: 100 },
+        boundary: { width: 300, height: 300 },
+        showZoomer: true,
+        enableOrientation: false
+    });
+    const imagepreview=(evt)=>{
+        var img=document.querySelector('.img-pre')
+        img.src=URL.createObjectURL(evt.target.files[0])
+        console.log(evt.target.files[0])
+        el.style.display='block'
+        vanilla.bind({
+            url: URL.createObjectURL(evt.target.files[0]),
+        });
+    }
+    const getimg=()=>{
+        vanilla.result('blob').then((img)=>{
+            document.querySelector('.img-final').src=img
+            var fd=new FormData()
+            fd.append('image', img)
+            const url=`${window.location.origin}/api/image/upload`
+            fetch(url,{
+                method: 'POST',
+                body : fd
+            })
+        })
+    }
+    
+</script>

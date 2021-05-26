@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/11d589870a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/index.css">
+    <title>PawChat</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="user-details">
+                <div class="wrapper">
+                    <div class="pic">
+                        <%if(userDetails.isProfilePic){%>
+                            <img src="<%=userDetails.imgLocation%>" class="image">
+                        <%}else{%>
+                            <img src="/<%=userDetails.gender%>profilePic.svg" class="image">
+                        <%}%>
+                    </div>
+                    <div class="name-user">
+                        <div class="name">
+                            <%=userDetails.name%>
+                        </div>
+                        <div class="user">
+                            <%=userDetails.username%>
+                        </div>
+                    </div>
+                </div>
+                <div class="options">
+                    <span class="new-chat" onclick="newchat()">
+                        <i class="far fa-comment-alt"></i>
+                    </span>
+                    <span class="new-chat" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="search">
+
+            </div>
+            <div class="chats">
+                
+            </div>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+</body>
+<script src='/index.js'></script>
+</html>

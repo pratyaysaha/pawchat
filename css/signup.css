@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+html,body{
+    width:100%;
+    height: 100%;
+    margin: 0px;
+}
+.content-container
+{
+    width : 100%;
+    height: calc(100% - 150px);
+    display: flex;
+    align-items: center;
+}
+.content-left,.content-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.img-wrapper
+{
+    height: 60%;
+}
+.login-img
+{
+    width : 70%;
+    height: 70%;
+}
+.content-left
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coloring
+{
+    width: 50%;
+    height : calc(100% - 50px);
+    position : absolute;
+    background-color: #4481eb;
+    z-index: -2;
+    border-bottom-right-radius: 90%;
+}
+.content-right
+{
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper
+{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-field
+{
+    width: fit-content;
+    border: 1px solid #444;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 47px;
+    width: 300px;
+}
+.input-field>i{
+    color: #444;
+    font-size: 20px;
+}
+.input
+{
+    width: 250px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-right: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+.input.password{
+    width: 230px;
+}
+.gender{
+    width: 260px;
+}
+.password-show:hover{
+    cursor: pointer;
+}
+.button-container
+{
+    position: relative;
+    top:20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    user-select: none;
+}
+.image
+{
+    top:10px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.button
+{
+    background-color: #4481eb;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 47px;
+    color: white;
+}
+.button:hover
+{
+    cursor: pointer;
+    background-color: #184594;
+}
+.input-pic
+{
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+.pic-wrapper
+{
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    border : 2px solid #444;
+    background-image: url(/maleprofilePic.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.edit-button, .remove-btn
+{
+    position : relative;
+    left: 30px;
+    font-size: 20px;
+}
+.remove-btn
+{
+    left: 0px;
+    top: 20px;
+    display: none;
+}
+.edit-btn:hover,.remove-btn:hover
+{
+    cursor: pointer;
+}
+.img
+{
+    width:400px;
+    height: 450px;
+    position: absolute;
+    z-index: 999;
+    right:40%;
+    top:20%;
+    display: none;
+    flex-direction: column;
+    background-color:white;
+}
+.error-message{
+    color:red;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+.loading
+{
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    font-size: 30px;
+    display: none;
+}
+@media screen  and (max-height : 550px) {
+    .coloring{
+        display: none;
+    }
+    .content-left
+    {
+        display: none;
+    }
+    .login-img
+    {
+        display: none;
+    }
+    .content-container{
+        height: 100%;
+    }
+
+}
+@media screen  and (max-width : 880px)
+{
+    .coloring{
+        display: none;
+    }
+    .content-left
+    {
+        display: none;
+    }
+    .login-img
+    {
+        display: none;
+    }
+    .content-container{
+        height: 100%;
+    }
+    .wrapper
+    {
+        width: 90%;
+        height: 90%;
+    }
+    .content-right
+    {
+        width: 100%;
+        height:90%;
+    }
+
+}
